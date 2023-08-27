@@ -1,1 +1,222 @@
+import * as React from "react";
+import { Image } from "expo-image";
+import { StyleSheet, Text, View } from "react-native";
+import { FontFamily, Color, FontSize } from "../GlobalStyles";
+
+const QRCodeScan = () => {
+  return (
+    <View style={styles.qrCodeScan}>
+      <View style={[styles.statusBar, styles.statusPosition]}>
+        <Image
+          style={[styles.statusBarChild, styles.batteryIconLayout]}
+          contentFit="cover"
+          source={require("../assets/rectangle-21.png")}
+        />
+        <Image
+          style={[styles.batteryIcon, styles.batteryIconLayout]}
+          contentFit="cover"
+          source={require("../assets/battery.png")}
+        />
+        <Image
+          style={styles.wifiIcon}
+          contentFit="cover"
+          source={require("../assets/wifi.png")}
+        />
+        <Image
+          style={styles.mobileSignalIcon}
+          contentFit="cover"
+          source={require("../assets/mobile-signal.png")}
+        />
+        <View style={styles.timeStyle}>
+          <Text style={[styles.text, styles.textPosition]}>9:41</Text>
+        </View>
+      </View>
+      <Image
+        style={[styles.maskGroupIcon, styles.textPosition]}
+        contentFit="cover"
+        source={require("../assets/mask-group.png")}
+      />
+      <Image
+        style={[styles.qrCodeScanChild, styles.textPosition]}
+        contentFit="cover"
+        source={require("../assets/group-19.png")}
+      />
+      <Image
+        style={styles.aaham1Icon}
+        contentFit="cover"
+        source={require("../assets/aaham-1.png")}
+      />
+      <Image
+        style={[styles.qrCodeScanItem, styles.batteryIconLayout]}
+        contentFit="cover"
+        source={require("../assets/group-20.png")}
+      />
+      <Text style={[styles.description, styles.descriptionFlexBox]}>
+        <Text style={styles.descriptionTxt}>
+          <Text style={styles.text1}>“</Text>
+          <Text style={styles.whereFarmersCome}>
+            Where farmers come together to grow
+          </Text>
+          <Text style={styles.text1}>”</Text>
+        </Text>
+      </Text>
+      <Text style={[styles.aSimpleScan, styles.descriptionFlexBox]}>
+        A simple scan can change your day.
+      </Text>
+      <Image
+        style={styles.image1Icon}
+        contentFit="cover"
+        source={require("../assets/image-1.png")}
+      />
+    </View>
+  );
+};
+
+const styles = StyleSheet.create({
+  statusPosition: {
+    left: "0%",
+    right: "0%",
+    top: "0%",
+    width: "100%",
+  },
+  batteryIconLayout: {
+    maxHeight: "100%",
+    overflow: "hidden",
+    maxWidth: "100%",
+    position: "absolute",
+  },
+  textPosition: {
+    left: 0,
+    position: "absolute",
+  },
+  descriptionFlexBox: {
+    alignItems: "center",
+    display: "flex",
+    textAlign: "center",
+    position: "absolute",
+  },
+  statusBarChild: {
+    height: "100%",
+    bottom: "0%",
+    left: "0%",
+    right: "0%",
+    top: "0%",
+    width: "100%",
+  },
+  batteryIcon: {
+    height: "25.76%",
+    width: "6.49%",
+    top: "39.39%",
+    right: "3.91%",
+    bottom: "34.85%",
+    left: "89.6%",
+  },
+  wifiIcon: {
+    width: 15,
+    height: 11,
+  },
+  mobileSignalIcon: {
+    width: 17,
+    height: 11,
+  },
+  text: {
+    marginTop: -10,
+    fontSize: 15,
+    letterSpacing: 0,
+    fontFamily: FontFamily.abelRegular,
+    color: Color.gray1,
+    textAlign: "left",
+    width: 54,
+    top: "50%",
+  },
+  timeStyle: {
+    marginTop: -8,
+    right: 300,
+    left: 21,
+    height: 20,
+    top: "50%",
+    position: "absolute",
+  },
+  statusBar: {
+    height: "5.42%",
+    bottom: "94.58%",
+    position: "absolute",
+  },
+  maskGroupIcon: {
+    top: 716,
+    width: 377,
+    height: 96,
+    opacity: 0.3,
+  },
+  qrCodeScanChild: {
+    top: 796,
+    width: 375,
+    height: 16,
+  },
+  aaham1Icon: {
+    marginLeft: -59.5,
+    top: 84,
+    width: 120,
+    height: 40,
+    left: "50%",
+    position: "absolute",
+  },
+  qrCodeScanItem: {
+    height: "29.06%",
+    width: "91.47%",
+    top: "19.7%",
+    right: "4.27%",
+    bottom: "51.23%",
+    left: "4.27%",
+  },
+  text1: {
+    fontSize: FontSize.size_29xl,
+  },
+  whereFarmersCome: {
+    fontSize: 24,
+  },
+  descriptionTxt: {
+    lineBreak: "anywhere",
+    width: "100%",
+  },
+  description: {
+    top: 418,
+    left: 16,
+    lineHeight: 24,
+    fontFamily: FontFamily.josefinSansRegular,
+    color: "#946d42",
+    width: 343,
+    height: 80,
+  },
+  aSimpleScan: {
+    marginLeft: -170.5,
+    top: 700,
+    fontSize: 16,
+    textTransform: "capitalize",
+    fontWeight: "700",
+    fontFamily: FontFamily.josefinSansBold,
+    color: "#8dc73f",
+    justifyContent: "center",
+    width: 342,
+    left: "50%",
+    height: 16,
+  },
+  image1Icon: {
+    marginLeft: -49.5,
+    top: 549,
+    width: 100,
+    height: 100,
+    left: "50%",
+    position: "absolute",
+  },
+  qrCodeScan: {
+    borderRadius: 10,
+    backgroundColor: "#fff",
+    flex: 1,
+    height: 812,
+    width: "100%",
+  },
+});
+
+export default QRCodeScan;
 
