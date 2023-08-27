@@ -1,0 +1,437 @@
+import * as React from "react";
+import { Image } from "expo-image";
+import { StyleSheet, Text, View } from "react-native";
+import { FontFamily, FontSize, Color, Border } from "../GlobalStyles";
+
+const LandingScreen = () => {
+  return (
+    <View style={styles.landingScreen}>
+      <View style={[styles.statusBar, styles.statusPosition]}>
+        <Image
+          style={[styles.statusBarChild, styles.batteryIconLayout]}
+          contentFit="cover"
+          source={require("../assets/rectangle-21.png")}
+        />
+        <Image
+          style={[styles.batteryIcon, styles.batteryIconLayout]}
+          contentFit="cover"
+          source={require("../assets/battery.png")}
+        />
+        <Image
+          style={styles.wifiIcon}
+          contentFit="cover"
+          source={require("../assets/wifi.png")}
+        />
+        <Image
+          style={styles.mobileSignalIcon}
+          contentFit="cover"
+          source={require("../assets/mobile-signal.png")}
+        />
+        <View style={styles.timeStyle}>
+          <Text style={styles.text}>9:41</Text>
+        </View>
+      </View>
+      <Image
+        style={styles.maskGroupIcon}
+        contentFit="cover"
+        source={require("../assets/mask-group.png")}
+      />
+      <Image
+        style={styles.landingScreenChild}
+        contentFit="cover"
+        source={require("../assets/group-19.png")}
+      />
+      <Image
+        style={[styles.landingScreenItem, styles.itemLayout]}
+        contentFit="cover"
+        source={require("../assets/group-31.png")}
+      />
+      <Image
+        style={[styles.landingScreenInner, styles.batteryIconLayout]}
+        contentFit="cover"
+        source={require("../assets/group-10.png")}
+      />
+      <Text style={styles.text1}>
+        <Text style={styles.namasteAum}>
+          <Text style={styles.namaste}>{`Namaste `}</Text>
+          <Text style={[styles.aum, styles.aumTypo]}>AUM</Text>
+        </Text>
+        <Text style={styles.adharNo09What}>
+          <Text style={styles.namasteAum}>
+            <Text style={styles.text3}>{`,
+`}</Text>
+          </Text>
+          <Text style={styles.adharNo09What1}>
+            <Text style={styles.text3}>{`Adhar No. `}</Text>
+            <Text style={styles.aumTypo}>**** **** **09</Text>
+            <Text style={styles.text3}>{` 
+What’s your plan for today?`}</Text>
+          </Text>
+        </Text>
+      </Text>
+      <View style={styles.groupParent}>
+        <View style={styles.groupContainer}>
+          <View style={styles.buttonParent}>
+            <View style={styles.buttonShadowBox}>
+              <Text style={styles.text5}>MARKET RATES AND UPDATES</Text>
+            </View>
+            <Image
+              style={styles.storeIcon}
+              contentFit="cover"
+              source={require("../assets/store.png")}
+            />
+            <Image
+              style={[styles.marketAnalysisIcon, styles.iconPosition]}
+              contentFit="cover"
+              source={require("../assets/market-analysis.png")}
+            />
+            <Image
+              style={styles.groupChild}
+              contentFit="cover"
+              source={require("../assets/vector-1.png")}
+            />
+            <Text style={[styles.text6, styles.textFlexBox]}>₹</Text>
+            <Text style={[styles.text7, styles.textFlexBox]}>
+              Market Rates and Updates
+            </Text>
+          </View>
+          <View style={[styles.textParent, styles.textPosition]}>
+            <Text style={[styles.text7, styles.textFlexBox]}>
+              Financial Services
+            </Text>
+            <View style={styles.buttonShadowBox}>
+              <Text style={styles.text5}>MARKET RATES AND UPDATES</Text>
+            </View>
+            <Image
+              style={[styles.moneyIcon, styles.iconPosition]}
+              contentFit="cover"
+              source={require("../assets/money.png")}
+            />
+            <Image
+              style={[styles.groupItem, styles.itemLayout]}
+              contentFit="cover"
+              source={require("../assets/vector-11.png")}
+            />
+            <Text style={[styles.text10, styles.textFlexBox]}>₹</Text>
+          </View>
+          <View style={[styles.textGroup, styles.textPosition]}>
+            <Text style={[styles.text7, styles.textFlexBox]}>
+              Rent and Other Services
+            </Text>
+            <View style={styles.buttonShadowBox}>
+              <Text style={styles.text5}>MARKET RATES AND UPDATES</Text>
+            </View>
+            <Image
+              style={[styles.moneyIcon, styles.iconPosition]}
+              contentFit="cover"
+              source={require("../assets/real-estate.png")}
+            />
+          </View>
+        </View>
+        <Text style={[styles.description, styles.textFlexBox]}>Services</Text>
+      </View>
+    </View>
+  );
+};
+
+const styles = StyleSheet.create({
+  statusPosition: {
+    left: "0%",
+    right: "0%",
+    top: "0%",
+    width: "100%",
+  },
+  batteryIconLayout: {
+    maxHeight: "100%",
+    overflow: "hidden",
+    maxWidth: "100%",
+    position: "absolute",
+  },
+  itemLayout: {
+    height: 32,
+    position: "absolute",
+  },
+  aumTypo: {
+    fontFamily: FontFamily.robotoBold,
+    fontWeight: "600",
+  },
+  iconPosition: {
+    left: 10,
+    width: 80,
+    height: 80,
+    position: "absolute",
+  },
+  textFlexBox: {
+    justifyContent: "center",
+    alignItems: "center",
+    display: "flex",
+    textAlign: "center",
+    position: "absolute",
+  },
+  textPosition: {
+    marginTop: -74.5,
+    height: 149,
+    top: "50%",
+    position: "absolute",
+  },
+  statusBarChild: {
+    height: "100%",
+    bottom: "0%",
+    left: "0%",
+    right: "0%",
+    top: "0%",
+    width: "100%",
+  },
+  batteryIcon: {
+    height: "25.76%",
+    width: "6.49%",
+    top: "39.39%",
+    right: "3.91%",
+    bottom: "34.85%",
+    left: "89.6%",
+  },
+  wifiIcon: {
+    width: 15,
+    height: 11,
+  },
+  mobileSignalIcon: {
+    width: 17,
+    height: 11,
+  },
+  text: {
+    marginTop: -10,
+    fontSize: FontSize.size_mini,
+    letterSpacing: 0,
+    fontFamily: FontFamily.abelRegular,
+    color: Color.gray1,
+    width: 54,
+    textAlign: "left",
+    left: 0,
+    top: "50%",
+    position: "absolute",
+  },
+  timeStyle: {
+    marginTop: -8,
+    right: 300,
+    left: 21,
+    height: 20,
+    top: "50%",
+    position: "absolute",
+  },
+  statusBar: {
+    height: "5.42%",
+    bottom: "94.58%",
+    position: "absolute",
+  },
+  maskGroupIcon: {
+    top: 716,
+    width: 377,
+    height: 96,
+    opacity: 0.3,
+    display: "none",
+    left: 0,
+    position: "absolute",
+  },
+  landingScreenChild: {
+    top: 796,
+    width: 375,
+    height: 16,
+    left: 0,
+    position: "absolute",
+  },
+  landingScreenItem: {
+    marginLeft: -171.5,
+    top: 56,
+    left: "50%",
+    width: 343,
+    height: 32,
+  },
+  landingScreenInner: {
+    height: "24.63%",
+    width: "91.47%",
+    top: "29.56%",
+    right: "4.27%",
+    bottom: "45.81%",
+    left: "4.27%",
+  },
+  namaste: {
+    color: Color.blackBlack3,
+    fontFamily: FontFamily.robotoRegular,
+  },
+  aum: {
+    color: Color.yellowgreen,
+  },
+  namasteAum: {
+    fontSize: FontSize.size_13xl,
+  },
+  text3: {
+    fontFamily: FontFamily.robotoRegular,
+  },
+  adharNo09What1: {
+    fontSize: FontSize.size_base,
+  },
+  adharNo09What: {
+    color: Color.blackBlack3,
+  },
+  text1: {
+    marginTop: -302,
+    width: 342,
+    height: 80,
+    left: 16,
+    textAlign: "left",
+    top: "50%",
+    position: "absolute",
+  },
+  text5: {
+    marginTop: -19,
+    left: 20,
+    fontSize: FontSize.size_3xl,
+    fontFamily: FontFamily.muktaRegular,
+    width: 60,
+    textAlign: "center",
+    color: Color.blackBlack3,
+    display: "none",
+    top: "50%",
+    position: "absolute",
+  },
+  buttonShadowBox: {
+    height: 100,
+    shadowOpacity: 1,
+    elevation: 10,
+    shadowRadius: 10,
+    shadowOffset: {
+      width: 2,
+      height: 2,
+    },
+    shadowColor: "#caccc6",
+    backgroundColor: Color.yellowgreen,
+    borderRadius: Border.br_base,
+    width: 100,
+    top: 0,
+    left: 0,
+    position: "absolute",
+  },
+  storeIcon: {
+    top: 617,
+    left: 26,
+    width: 80,
+    height: 80,
+    display: "none",
+    position: "absolute",
+  },
+  marketAnalysisIcon: {
+    top: 12,
+  },
+  groupChild: {
+    top: 15,
+    left: 72,
+    width: 12,
+    height: 17,
+    position: "absolute",
+  },
+  text6: {
+    top: 18,
+    left: 73,
+    width: 9,
+    height: 15,
+    color: Color.black,
+    fontFamily: FontFamily.leagueSpartanSemiBold,
+    justifyContent: "center",
+    alignItems: "center",
+    display: "flex",
+    textTransform: "capitalize",
+    lineHeight: 18,
+    fontWeight: "600",
+    fontSize: FontSize.size_base,
+  },
+  text7: {
+    marginTop: 34.5,
+    fontSize: FontSize.size_sm,
+    fontFamily: FontFamily.latoBold,
+    height: 40,
+    textTransform: "capitalize",
+    lineHeight: 18,
+    justifyContent: "center",
+    alignItems: "center",
+    display: "flex",
+    width: 100,
+    fontWeight: "600",
+    color: Color.blackBlack3,
+    left: 0,
+    top: "50%",
+  },
+  buttonParent: {
+    width: 100,
+    top: 0,
+    height: 149,
+    left: 0,
+    position: "absolute",
+  },
+  moneyIcon: {
+    top: 10,
+  },
+  groupItem: {
+    top: 47,
+    left: 54,
+    width: 22,
+  },
+  text10: {
+    top: 55,
+    left: 56,
+    fontSize: 26,
+    width: 16,
+    height: 23,
+    color: Color.black,
+    fontFamily: FontFamily.leagueSpartanSemiBold,
+    justifyContent: "center",
+    alignItems: "center",
+    display: "flex",
+    textTransform: "capitalize",
+    lineHeight: 18,
+    fontWeight: "600",
+  },
+  textParent: {
+    right: 121,
+    left: 122,
+  },
+  textGroup: {
+    right: 0,
+    left: 243,
+  },
+  groupContainer: {
+    top: 85,
+    height: 149,
+    width: 343,
+    left: 0,
+    position: "absolute",
+  },
+  description: {
+    fontSize: FontSize.size_29xl,
+    lineHeight: 24,
+    fontFamily: FontFamily.josefinSansRegular,
+    color: Color.sienna,
+    height: 56,
+    justifyContent: "center",
+    alignItems: "center",
+    display: "flex",
+    top: 0,
+    width: 343,
+    left: 0,
+  },
+  groupParent: {
+    top: 522,
+    height: 234,
+    left: 16,
+    width: 343,
+    position: "absolute",
+  },
+  landingScreen: {
+    borderRadius: Border.br_3xs,
+    backgroundColor: Color.blackBlack100,
+    flex: 1,
+    height: 812,
+    width: "100%",
+  },
+});
+
+export default LandingScreen;
